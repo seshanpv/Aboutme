@@ -1,1 +1,162 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SeshanPV</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="../ui/style.css" />
+
+
+
+	<!--fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Amatica+SC" rel="stylesheet">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="../js/jquery.pagepiling.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	          /*	direction: 'horizontal', */
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+			    sectionsColor: ['white', '#39C', '#2C3E50' , '#ee005a', '#2C3E50' ],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4', 'Page 5']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+	    });
+    </script>
+
+
+    <style>
+	#section1 img{
+		margin: 20px 0;
+		opacity: 0.7;
+	}
+	/* colors
+	 * --------------------------------------- */
+	#colors2,
+	#colors3{
+		position: absolute;
+		height: 163px;
+		width: 362px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		left: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	#colors2{
+		background-image: url(../images/colors2.gif);
+		top:0;
+	}
+	#colors3{
+		background-image: url(../images/colors3.gif);
+		bottom:0;
+	}
+
+
+
+</style>
+
+</head>
+<body>
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+		<li data-menuanchor="page2"><a href="#page2">About me</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Profile</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Blog</a></li>
+		<li data-menuanchor="page5"><a href="#page5">Contact</a></li>
+	</ul>
+
+
+	<div id="pagepiling">
+
+	    <div class="section" id="section1">
+	<img style="height:15rem ; width:15rem ; border-radius:50% ; opacity:inherit" src="../images/seshan.jpg" />
+			<br />
+
+
+			<h1 class="hey" style="font-size:4rem;">Hey, I'm Seshan !</h1>
+			<p class="hey">Wanna Know About Me ?</p>
+
+	    </div>
+
+	    <div class="section">
+	    	<div class="intro">
+					<h1  style="margin-right:25%; padding-bottom:2%; margin-top:6%">Apple Lover</h1>
+					<h1  style="font-size:x-large; margin-left:10%; padding-bottom:2%">Computer Geek</h1>
+					<h1  style="font-size:xx-large; margin-right:20%; padding-bottom:2% ">Loves statistics</h1>
+					<h1  style="font-size:x-large; margin-left:25%; padding-bottom:2%">Impressive Negotiator</h1>
+					<h1  style="margin-left:10%; padding-bottom:2%">Loves design</h1>
+					<h1  style="font-size:xx-large; margin-right:25%; padding-bottom:2%">GoT Fan</h1>
+					<h1  style="font-size:x-large; margin-left:25%; padding-bottom:2%">Traveller</h1>
+					<h1  style="margin-right:5%; padding-bottom:2%">Creative</h1>
+
+	    	</div>
+	    </div>
+
+			<div class="section">
+				<div class="intro">
+					<a href="https://drive.google.com/file/d/0B1RDAo732-WReVFvdXNKLTNmYjQ/view?usp=sharing">
+					<h1>My Resume´</h1>
+				</a>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="intro">
+
+					<a href="http://theditheringdamsel.blogspot.in/">
+					<h1>Blog.</h1>
+					<h1>The dithering damsel <h1>
+					<h4>***blogspot***<h4>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="intro">
+					<a href="https://github.com/seshanpv">
+					  <img src="../images/GitHub.gif" alt="facebook" align="center" width="100" height="100"  style="margin-right:10%">
+					</a>
+					<a href="https://in.linkedin.com/in/seshan-p-v-01b84812b">
+					  <img src="../images/l.png" alt="linkedin" align="center"  width="100" height="100" style="margin-right:10%">
+					</a>
+					<a href="https://twitter.com/seshan_pv">
+						<img src="../images/t.png" alt="twitter" align="center"  width="100" height="100">
+					</a>
+
+				</div>
+
+				<div id="colors2"></div>
+				<div id="colors3"></div>
+			</div>
+
+
+
+	</div>
+
+
+
+</body>
+</html>
